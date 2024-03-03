@@ -30,8 +30,71 @@ public class LargeBag extends Bag{
         return super.isNearBy(item, player);
     }
     @Override
-    public void useItem(Player player){
+    public int countItemsInBag(Item[]items){
+        return  super.countItemsInBag(items);
+    }
+    @Override
+    public  int countFreePlaces(Item[]items){
+        return super.countFreePlaces(items);
+    }
+    public  int getIndexForCurrentBag(Item[] it){
+        int index= 0;
+        int place= -1;
+        while(index < it.length && place == -1){
+            if(it[index] == null){
+                place= index;
+            } else
+            {
+                index++;
+            }
+        }
+        return place;
+    }
 
+    @Override
+    public void useItem(Player player) {
+        if(isNearBy(this,player)){ //The bag is nearby
+            int spaceInNewFuturePlayerBag= this.countFreePlaces(this.getInventory());
+            int itemsInPlayerBag= player.getPlayerBag().countItemsInBag(player.getInventory());
+            boolean isTherePlace= (spaceInNewFuturePlayerBag >= itemsInPlayerBag); //(&&) varify if largeBag cant be in largeBag
+            if (isTherePlace){
+                int i=0;
+                int j=0;
+                while(i<player.getInventory().length){
+                    if(player.getInventory()[i]!=null && this.getInventory()[j] == null){
+                        this.getInventory()[j]=player.getInventory()[i];
+                        player.getInventory()[i]=null;
+                        i++;
+                        j++;
+                    } else {
+                        if (player.getInventory()[i] == null) {
+                            i++;
+                        }
+                        if (this.getInventory()[j] != null) {
+                            j++;
+                        }
+                    }
+                }
+                if(player.getPlayerBag() instanceof Bag ){//checks if the current is bag in order to check if i can put him inside the new bag
+                    int index= getIndexForCurrentBag(this.getInventory());
+                    if(index != -1){
+                        this.getInventory()[index]=player.getPlayerBag();
+                    } else {
+                        player.destroyBag(player.getPlayerBag());
+                    }
+                } else {
+                    player.destroyBag(player.getPlayerBag());
+                }
+                player.setPlayerBag(this);
+                System.out.println(player.getName()+" is now carrying "+this.getName()+".");
+            }
+            else {
+                System.out.println(this.getName()+" is too small.");
+            }
+        }
+        else {
+            System.out.println(this.getName()+" is not near "+player.getName()+".");
+        }
     }
 
     public int sumValuesOfLargeBagItems(){
@@ -42,8 +105,8 @@ public class LargeBag extends Bag{
         return sum;
     }
     @Override
-    public boolean equals(Object otherLargeBag1) {
-        if (!(otherLargeBag1 instanceof LargeBag)) {
+    public boolean equals(Object otherLargeBag1){
+        if (!(otherLargeBag1 instanceof LargeBag)){
             return false;
         }
         LargeBag otherLargeBag2 = (LargeBag) otherLargeBag1;
@@ -53,21 +116,17 @@ public class LargeBag extends Bag{
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode(){
         int result = 31; // Different initial prime number
         int multiplier = 53; // Different multiplier
-
         result = multiplier * result + name.hashCode();
         result = multiplier * result + value;
         result = multiplier * result + cap;
-
-        for (Item item : inventory) {
+        for (Item item : inventory){
             if (item != null) {
                 result = multiplier * result + item.hashCode();
             }
         }
-
         return result;
     }
-
 }

@@ -100,7 +100,7 @@ public class Player {
                 currentRoom.getListItems()[i]= null;
             }
         }
-        this. playerBag.getInventory()[place]=newItem;//הכנסת הפריט לתיק
+        this.playerBag.getInventory()[place]=newItem;
         System.out.println(this.name + " picked up " + newItem.getName() + " from " + currentRoom.getRoomName() + ".");
     }
 
@@ -133,6 +133,12 @@ public class Player {
     }
     public void setPlayerBag(Bag newBag){
         this.playerBag=newBag;
+    }
+
+
+    public void destroyBag(Bag bag){
+        System.out.println(this.getName() + " disassembled " + bag.getName() + ".");
+        this.playerBag=null;
     }
 
     @Override

@@ -33,14 +33,14 @@ public class Key extends Item{
             boolean isKeyNearby= isNearBy(this, player);
             if(isKeyNearby){
                 for (int i=0; i<currentRoom.getListItems().length; i++){ // Checking if the item is in the Room
-                    if(currentRoom.getListItems()[i].equals(this)){
+                    if(currentRoom.getListItems()[i]!= null && currentRoom.getListItems()[i].equals(this)){
                         player.getCurrentRoom().setRoomKey(this);
                         player.getCurrentRoom().setKeyRoomStatus(true);
                         currentRoom.getListItems()[i]= null;
                     }
                 }
                 for(int j=0; j<player.getInventory().length; j++){  // Checking if the item is in the player's bag
-                    if(player.getInventory()[j].equals(this)) {
+                    if(player.getInventory()[j] != null && player.getInventory()[j].equals(this)) {
                         player.getCurrentRoom().setRoomKey(this);
                         player.getCurrentRoom().setKeyRoomStatus(true);
                         player.getInventory()[j]= null;
@@ -51,12 +51,10 @@ public class Key extends Item{
                 {
                     player.getCurrentRoom().setPuzzleStatus(false);
                 }
-            }
-            else {
+            } else {
                 System.out.println(this.name+" is not near "+player.getName()+".");
             }
         }
-
     }
 
     @Override

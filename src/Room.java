@@ -82,8 +82,10 @@ public class Room {
      */
     public void removeFromRoomDirection(Room r){
         for (int i=0;i<roomsDirections.length;i++){
-            if(this.roomsDirections[i].equals(r)){
-                this.roomsDirections[i]=null;
+            if(this.roomsDirections[i]!= null){
+                if(this.roomsDirections[i].equals(r)){
+                    this.roomsDirections[i]=null;
+                }
             }
         }
     }
@@ -157,8 +159,12 @@ public class Room {
 
     public int sumValuesOfRoomItems(){
         int sum=0;
-        for (int i=0; i<this.listItems.length; i++){
-            sum+= listItems[i].getValue();
+        if(this != null){
+            for (int i=0; i<this.getListItems().length; i++){
+                if(this.getListItems()[i] != null){
+                    sum+= this.getListItems()[i].getValue();
+                }
+            }
         }
         return sum;
     }
@@ -171,34 +177,28 @@ public class Room {
         return (this.getRoomName() == otherRoom.getRoomName() &&
                 this.getPuzzleStatus()== otherRoom.getPuzzleStatus()&&
                 this.getKeyRoomStatus()== otherRoom.getKeyRoomStatus()&&
-                this.sumValuesOfRoomItems()== otherRoom.sumValuesOfRoomItems());
+                this.sumValuesOfRoomItems() == otherRoom.sumValuesOfRoomItems());
     }
     @Override
     public int hashCode() {
         int result = 19; // Different initial prime number
         int multiplier = 43; // Different multiplier
-
         result = multiplier * result + name.hashCode();
         result = multiplier * result + (puzzleStatus ? 1 : 0);
         result = multiplier * result + (keyRoomStatus ? 1 : 0);
         result = multiplier * result + sumValuesOfRoomItems();
         result = multiplier * result + (roomkey != null ? roomkey.hashCode() : 0);
-
         for (Item item : listItems) {
             if (item != null) {
                 result = multiplier * result + item.hashCode();
             }
         }
-
         for (Room room : roomsDirections) {
             if (room != null) {
                 result = multiplier * result + room.hashCode();
             }
         }
-
         return result;
     }
-
-
 
 }

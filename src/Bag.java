@@ -82,14 +82,15 @@ public class Bag extends Item {
         else {
             System.out.println(this.getName()+" is not near "+player.getName()+".");
         }
-
     }
 
     // Method to sum values of bag items
     public int sumValuesOfBagItems() {
         int sum = 0;
         for (int i = 0; i < this.inventory.length; i++) {
-            sum += inventory[i].getValue();
+            if(inventory[i] != null){
+                sum += inventory[i].getValue();
+            }
         }
         return sum;
     }
@@ -100,7 +101,7 @@ public class Bag extends Item {
             return false;
         }
         Bag otherBag2 = (Bag) otherBag1;
-        return (this.getValue()==otherBag2.getValue()&& this.sumValuesOfBagItems() == otherBag2.sumValuesOfBagItems() &&
+        return (this.getValue() == otherBag2.getValue() && this.sumValuesOfBagItems() == otherBag2.sumValuesOfBagItems() &&
                 this.getInventory().length == otherBag2.getInventory().length);
     }
 
@@ -108,17 +109,14 @@ public class Bag extends Item {
     public int hashCode() {
         int result = 29; // Different initial prime number
         int multiplier = 47; // Different multiplier
-
         result = multiplier * result + name.hashCode();
         result = multiplier * result + value;
         result = multiplier * result + cap;
-
         for (Item item : inventory) {
             if (item != null) {
                 result = multiplier * result + item.hashCode();
             }
         }
-
         return result;
     }
 

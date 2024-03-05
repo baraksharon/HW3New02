@@ -6,7 +6,7 @@ public class LargeBag extends Bag{
     public final int defultCap= 5;
     public LargeBag(String name, int value, int cap){
         super(name, value, cap);
-        if(cap<defultCap)
+        if(cap < defultCap)
         {
             this.inventory=new Item[defultCap];
         }
@@ -40,11 +40,10 @@ public class LargeBag extends Bag{
     public  int getIndexForCurrentBag(Item[] it){
         int index= 0;
         int place= -1;
-        while(index < it.length && place == -1){
+        while(index< it.length && place == -1){
             if(it[index] == null){
-                place= index;
-            } else
-            {
+                place = index;
+            } else {
                 index++;
             }
         }
@@ -87,8 +86,7 @@ public class LargeBag extends Bag{
                 }
                 player.setPlayerBag(this);
                 System.out.println(player.getName()+" is now carrying "+this.getName()+".");
-            }
-            else {
+            } else {
                 System.out.println(this.getName()+" is too small.");
             }
         }
@@ -100,7 +98,9 @@ public class LargeBag extends Bag{
     public int sumValuesOfLargeBagItems(){
         int sum=0;
         for (int i=0; i<this.inventory.length; i++){
-            sum+= inventory[i].getValue();
+            if(inventory[i] != null){
+                sum+= inventory[i].getValue();
+            }
         }
         return sum;
     }
@@ -110,7 +110,7 @@ public class LargeBag extends Bag{
             return false;
         }
         LargeBag otherLargeBag2 = (LargeBag) otherLargeBag1;
-        return (this.getValue()==otherLargeBag2.getValue()&&
+        return (this.getValue() == otherLargeBag2.getValue() &&
                 this.sumValuesOfLargeBagItems() == otherLargeBag2.sumValuesOfLargeBagItems() &&
                 this.getInventory().length == otherLargeBag2.getInventory().length);
     }
@@ -129,4 +129,5 @@ public class LargeBag extends Bag{
         }
         return result;
     }
+
 }

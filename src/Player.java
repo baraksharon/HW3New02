@@ -111,9 +111,9 @@ public class Player {
      * @param place      The index of the item in the inventory.
      */
     public void dropItem(Item itemToDrop, int place){
-        for(int i = 0; i<this. playerBag.getInventory().length; i++){
-            if(this. playerBag.getInventory()[i].equals(itemToDrop)){
-                this. playerBag.getInventory()[i]= null;
+        for(int i = 0; i< this.playerBag.getInventory().length; i++){
+            if(this.playerBag.getInventory()[i] != null && this.playerBag.getInventory()[i].equals(itemToDrop)){
+                this.playerBag.getInventory()[i]= null;
             }
         }
         this.currentRoom.getListItems()[place]= itemToDrop;
@@ -122,8 +122,10 @@ public class Player {
 
     public int sumValuesOfplayerBag(){
         int sum=0;
-        for (int i=0; i<this.playerBag.inventory.length; i++){
-            sum+= this.playerBag.inventory[i].getValue();
+        for (int i=0; i<this.playerBag.getInventory().length; i++){
+            if(this.playerBag.getInventory()[i] != null) {
+                sum += this.playerBag.getInventory()[i].getValue();
+            }
         }
         return sum;
     }
@@ -138,7 +140,7 @@ public class Player {
 
     public void destroyBag(Bag bag){
         System.out.println(this.getName() + " disassembled " + bag.getName() + ".");
-        this.playerBag=null;
+        this.playerBag= null;
     }
 
     @Override
@@ -153,19 +155,15 @@ public class Player {
     public int hashCode() {
         int result = 23; // Different initial prime number
         int multiplier = 37; // Different multiplier
-
         result = multiplier * result + name.hashCode();
         result = multiplier * result + sumValuesOfplayerBag();
         result = multiplier * result + (currentRoom != null ? currentRoom.hashCode() : 0);
-
         for (Item item : this.playerBag.inventory) {
             if (item != null) {
                 result = multiplier * result + item.hashCode();
             }
         }
-
         return result;
     }
-
 
 }

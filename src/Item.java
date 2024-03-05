@@ -11,16 +11,16 @@ abstract class Item {
     public int getValue(){
         return this.value;
     }
-    public boolean isNearBy(Item item,Player player){
+    public boolean isNearBy(Item item, Player player){
         boolean isNearby= false;
         Room currentRoom= player.getCurrentRoom();
         for (int i=0; i<currentRoom.getListItems().length; i++){ // Chcking if the item is in the Room
-            if(currentRoom.getListItems()[i].equals(this)){
+            if(currentRoom.getListItems()[i] != null && currentRoom.getListItems()[i].equals(this)){
                 isNearby= true;
             }
         }
         for(int j=0; j<player.getInventory().length; j++){  // Checking if the item is in the player's bag
-            if(player.getInventory()[j].equals(this)) {
+            if(player.getInventory()[j] != null && player.getInventory()[j].equals(this)) {
                 isNearby= true;
             }
         }

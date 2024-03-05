@@ -41,13 +41,15 @@ public class Main {
         Room room5 = new Room("Room 5");
         Room room6 = new Room("Room 6");
 
+        Room tempRoom = new Room("Room 5");
+
         gameManager.addRoom(room1);
         gameManager.addRoom(room2);
         gameManager.addRoom(room3);
         gameManager.addRoom(room4);
         gameManager.addRoom(room5);
         gameManager.addRoom(room6);
-        gameManager.removeRoom(room5);
+        gameManager.removeRoom(tempRoom);
         gameManager.addRoom(room6);
 
 
@@ -71,9 +73,9 @@ public class Main {
         Room room1 = new Room("Room 1");
         Room room2 = new Room("Room 2");
 
-        Item item1 = new Item("Item 1");
-        Item item2 = new Item("Item 2");
-        Item item3 = new Item("Item 3");
+        Item item1 = new Bag("Item 1", 5, 2);  // String name, int value, int size
+        Item item2 = new Key("Item 2", 3);
+        Item item3 = new Relic("Item 3", 9);
 
         gameManager.addItem(room1, item1);
 
@@ -100,9 +102,11 @@ public class Main {
 
         gameManager.startPlayer(room1);
 
-        Item item1 = new Item("Item 1");
-        Item item2 = new Item("Item 2");
-        Item item3 = new Item("Item 3");
+        Item item1 = new Relic("Item 1", 2);
+        Item item2 = new Relic("Item 2", 6);
+        Item item3 = new Relic("Item 3", 7);
+
+        Item tempItem = new Relic("Item 2", 6);
 
         gameManager.addItem(room1, item1);
         gameManager.addItem(room1, item2);
@@ -110,9 +114,11 @@ public class Main {
         gameManager.dropItem(item1);
         gameManager.pickUpItem(item1);
         gameManager.pickUpItem(item1);
-        gameManager.pickUpItem(item2);
+        gameManager.pickUpItem(tempItem);
 
-        gameManager.dropItem(item1);
+        tempItem = new Relic("I don't know what is the name of the relic, please find it for me", 2);
+
+        gameManager.dropItem(tempItem);
         gameManager.pickUpItem(item3);
         gameManager.pickUpItem(item1);
 
@@ -128,9 +134,9 @@ public class Main {
         Room room1 = new Room("Room 1");
         Room room2 = new Room("Room 2");
 
-        Item item1 = new Item("Item 1");
-        Item item2 = new Item("Item 2");
-        Item item3 = new Item("Item 3");
+        Item item1 = new Relic("Item 1", 2);
+        Item item2 = new Relic("Item 2", 6);
+        Item item3 = new Relic("Item 3", 7);
 
         gameManager.addItem(room1, item1);
 
@@ -170,8 +176,8 @@ public class Main {
 
         Room room1 = new Room("Room 1");
 
-        Item item1 = new Item("Item 1");
-        Item item2 = new Item("Item 2");
+        Item item1 = new Relic("Item 1", 2);
+        Item item2 = new Relic("Item 2", 6);
 
         gameManager.addItem(room1, item1);
 

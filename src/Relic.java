@@ -26,8 +26,7 @@ public class Relic extends Item{
         boolean isRelicNearby= isNearBy(this,player);
         if(isRelicNearby){
             System.out.println(player.getName()+" is inspecting "+this.getName()+".");
-        }
-        else {
+        } else {
             System.out.println(this.getName()+" is not near "+player.getName()+".");
         }
     }
@@ -44,11 +43,9 @@ public class Relic extends Item{
     public int hashCode() {
         int result = 19; // Different initial prime number
         int multiplier = 43; // Different multiplier
-
         result = multiplier * result + name.hashCode();
         result = multiplier * result + value;
         return result;
     }
-
 
 }

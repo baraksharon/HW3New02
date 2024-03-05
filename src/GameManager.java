@@ -88,7 +88,7 @@ public class GameManager {
     public void removeRoom(Room r) {
         boolean isthere = false; // if the room is exists in the room array
         for (int i = 0; i < rooms.length; i++) {
-            if (rooms[i].equals(r) ) {
+            if (rooms[i] != null && rooms[i].equals(r) ) {
                 isthere = true;
                 if (this.player != null) {
                     if (this.player.getCurrentRoom().equals(r)) {//if the player's current room is what we want to remove
@@ -194,7 +194,7 @@ public class GameManager {
         Room current = this.player.getCurrentRoom();
         boolean isInRoom = false;
         for (int j = 0; j < current.getListItems().length; j++) {
-            if (current.getListItems()[j].equals(it)) {
+            if (current.getListItems()[j] != null && current.getListItems()[j].equals(it)) {
                 isInRoom = true;
                 boolean isTherePlace = false;
                 int count = 0;
@@ -230,7 +230,8 @@ public class GameManager {
     public void dropItem(Item it) {
         boolean isInBag = false;
         for (int i = 0; i < this.player.getInventory().length; i++) {
-            if (this.player.getInventory()[i].equals(it) ) {
+            if (this.player.getInventory()[i] != null  && this.player.getInventory()[i].equals(it)) {
+                index=i;
                 isInBag = true;
             }
         }
@@ -266,7 +267,7 @@ public class GameManager {
     public void disassembleItem(Item it) {
         boolean isDestroyed = false;
         for (int i = 0; i < this.player.getInventory().length; i++) {
-            if (this.player.getInventory()[i].equals(it) ) {
+            if (this.player.getInventory()[i] != null && this.player.getInventory()[i].equals(it) ) {
                 this.player.destroyItemFromInventory(it,i);
                 isDestroyed = true;
             }

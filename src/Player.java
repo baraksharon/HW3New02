@@ -155,14 +155,7 @@ public class Player {
     public int hashCode() {
         int result = 23; // Different initial prime number
         int multiplier = 37; // Different multiplier
-        result = multiplier * result + name.hashCode();
         result = multiplier * result + sumValuesOfplayerBag();
-        result = multiplier * result + (currentRoom != null ? currentRoom.hashCode() : 0);
-        for (Item item : this.playerBag.inventory) {
-            if (item != null) {
-                result = multiplier * result + item.hashCode();
-            }
-        }
         return result;
     }
 

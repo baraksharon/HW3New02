@@ -187,17 +187,6 @@ public class Room {
         result = multiplier * result + (puzzleStatus ? 1 : 0);
         result = multiplier * result + (keyRoomStatus ? 1 : 0);
         result = multiplier * result + sumValuesOfRoomItems();
-        result = multiplier * result + (roomkey != null ? roomkey.hashCode() : 0);
-        for (Item item : listItems) {
-            if (item != null) {
-                result = multiplier * result + item.hashCode();
-            }
-        }
-        for (Room room : roomsDirections) {
-            if (room != null) {
-                result = multiplier * result + room.hashCode();
-            }
-        }
         return result;
     }
 

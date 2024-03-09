@@ -20,10 +20,6 @@ public class Main {
         System.out.println("Test 4 done");
         System.out.println("--------------------------------------------");
 
-        System.out.println("Test 5 starts");
-        test5();
-        System.out.println("Test 5 done");
-        System.out.println("--------------------------------------------");
 
 
     }
@@ -32,37 +28,24 @@ public class Main {
      * Run first test of hw2
      */
     public static void test1(){
-        GameManager gameManager = new GameManager();
-
         Room room1 = new Room("Room 1");
         Room room2 = new Room("Room 2");
-        Room room3 = new Room("Room 3");
-        Room room4 = new Room("Room 4");
-        Room room5 = new Room("Room 5");
-        Room room6 = new Room("Room 6");
+        Room room3 = new Room("Room 1");
 
-        Room tempRoom = new Room("Room 5");
+        System.out.println("Are room1 and room2 equal: " + room1.equals(room2));
+        System.out.println("Are room2 and room1 equal: " + room2.equals(room1));
 
-        gameManager.addRoom(room1);
-        gameManager.addRoom(room2);
-        gameManager.addRoom(room3);
-        gameManager.addRoom(room4);
-        gameManager.addRoom(room5);
-        gameManager.addRoom(room6);
-        gameManager.removeRoom(tempRoom);
-        gameManager.addRoom(room6);
+        System.out.println("Are room1 and room3 equal: " + room1.equals(room3));
 
+        Item item1 = new Bag("Bag 1", 5, 5);
+        Item item2 = new Bag("Bag 2", 5, 5);
+        Item item3 = new LargeBag("Bag 1", 5, 5);
 
+        System.out.println("Are item1 and item2 equal: " + item1.equals(item2));
+        System.out.println("Are item2 and item1 equal: " + item2.equals(item1));
 
-        gameManager.connectRooms(room1, room2, Direction.NORTH);
-        gameManager.connectRooms(room1, room2, Direction.NORTH);
-        gameManager.connectRooms(room1, room3, Direction.NORTH);
-        gameManager.connectRooms(room3, room2, Direction.NORTH);
-        gameManager.connectRooms(room1, room3, Direction.SOUTH);
-
-        gameManager.removeRoom(room5);
-        gameManager.removeRoom(room2);
-        gameManager.connectRooms(room1, room4, Direction.NORTH);
+        System.out.println("Are item1 and item3 equal: " + item1.equals(item3));
+        System.out.println("Are item3 and item1 equal: " + item3.equals(item1));
     }
     /**
      * Run second test of hw2
@@ -72,19 +55,29 @@ public class Main {
 
         Room room1 = new Room("Room 1");
         Room room2 = new Room("Room 2");
+        Room room3 = new Room("Room 1");
 
-        Item item1 = new Bag("Item 1", 5, 2);  // String name, int value, int size
-        Item item2 = new Key("Item 2", 3);
-        Item item3 = new Relic("Item 3", 9);
+        Item item1 = new Relic("Item 1", 9);
+        Item item2 = new Key("Item 2", 4);
+        Item item3 = new Relic("Item 3", 5);
 
         gameManager.addItem(room1, item1);
 
         gameManager.addRoom(room1);
         gameManager.addRoom(room2);
+        gameManager.addRoom(room3);
+
+        System.out.println("Are room1 and room3 equal: " + room1.equals(room3));
 
         gameManager.addItem(room1, item1);
-        gameManager.addItem(room1, item2);
-        gameManager.addItem(room1, item3);
+
+        System.out.println("Are room1 and room3 equal: " + room1.equals(room3));
+
+        gameManager.addItem(room3, item3);
+        System.out.println("Are room1 and room3 equal: " + room1.equals(room3));
+        gameManager.addItem(room3, item2);
+        System.out.println("Are room1 and room3 equal: " + room1.equals(room3));
+
 
     }
     /**
@@ -94,53 +87,20 @@ public class Main {
         GameManager gameManager = new GameManager();
 
         Room room1 = new Room("Room 1");
-        gameManager.addRoom(room1);
-
-        Player player = new Player("Player 1", 2);
-
-        gameManager.addPlayer(player);
-
-        gameManager.startPlayer(room1);
-
-        Item item1 = new Relic("Item 1", 2);
-        Item item2 = new Relic("Item 2", 6);
-        Item item3 = new Relic("Item 3", 7);
-
-        Item tempItem = new Relic("Item 2", 6);
-
-        gameManager.addItem(room1, item1);
-        gameManager.addItem(room1, item2);
-
-        gameManager.dropItem(item1);
-        gameManager.pickUpItem(item1);
-        gameManager.pickUpItem(item1);
-        gameManager.pickUpItem(tempItem);
-
-        tempItem = new Relic("I don't know what is the name of the relic, please find it for me", 2);
-
-        gameManager.dropItem(tempItem);
-        gameManager.pickUpItem(item3);
-        gameManager.pickUpItem(item1);
-
-        gameManager.addItem(room1, item3);
-        gameManager.pickUpItem(item3);
-    }
-    /**
-     * Run fourth test of hw2
-     */
-    public static void test4(){
-        GameManager gameManager = new GameManager();
-
-        Room room1 = new Room("Room 1");
         Room room2 = new Room("Room 2");
+        Room room3 = new Room("Room 2");
+
 
         Item item1 = new Relic("Item 1", 2);
-        Item item2 = new Relic("Item 2", 6);
+        Item item2 = new Key("Key 2", 6);
         Item item3 = new Relic("Item 3", 7);
 
         gameManager.addItem(room1, item1);
 
         gameManager.addRoom(room1);
+        gameManager.addRoom(room2);
+
+        gameManager.removeRoom(room3);
         gameManager.addRoom(room2);
 
         gameManager.addItem(room2, item1);
@@ -154,7 +114,6 @@ public class Main {
 
         gameManager.connectRooms(room1, room2, Direction.NORTH);
 
-        gameManager.movePlayer(Direction.SOUTH);
         gameManager.pickUpItem(item3);
         gameManager.activatePuzzle(room1);
 
@@ -164,49 +123,73 @@ public class Main {
 
         gameManager.dropItem(item3);
         gameManager.solvePuzzle();
+        gameManager.pickUpItem(item1);
+        gameManager.activatePuzzle(room2);
+
         gameManager.movePlayer(Direction.SOUTH);
         gameManager.dropItem(item3);
-        gameManager.disassembleItem(item1);
-        gameManager.disassembleItem(item3);
         gameManager.pickUpItem(item3);
-    }
+        gameManager.useItem(item2);
+        gameManager.movePlayer(Direction.SOUTH);
 
-    public static void test5() {
+        Item item4 = new Relic("Item 4", 7);
+        gameManager.disassembleItem(item1);
+        gameManager.useItem(item4);
+        gameManager.disassembleItem(item4);
+        gameManager.pickUpItem(item4);
+    }
+    /**
+     * Run fourth test of hw2
+     */
+    public static void test4(){
         GameManager gameManager = new GameManager();
 
         Room room1 = new Room("Room 1");
+        Room room2 = new Room("Room 2");
 
-        Item item1 = new Relic("Item 1", 2);
-        Item item2 = new Relic("Item 2", 6);
+
+        Item item1 = new Bag("bag 1", 5, 3);
+        Item item2 = new Key("Key 2", 6);
+        Item item3 = new Relic("Item 3", 7);
+        Item item4 = new Relic("Relic 4", 2);
 
         gameManager.addItem(room1, item1);
 
         gameManager.addRoom(room1);
+        gameManager.addRoom(room2);
 
-        gameManager.addItem(room1, item2);
-        gameManager.addItem(room1, item1);
+        gameManager.connectRooms(room1, room2, Direction.NORTH);
+
+        gameManager.addItem(room2, item1);
+        gameManager.addItem(room2, item2);
+        gameManager.addItem(room1, item3);
+        gameManager.addItem(room1, item4);
 
         Player player = new Player("Player 1", 2);
 
         gameManager.addPlayer(player);
         gameManager.startPlayer(room1);
 
+        gameManager.pickUpItem(item3);
+        gameManager.pickUpItem(item4);
+
+        gameManager.movePlayer(Direction.NORTH);
+        gameManager.solvePuzzle();
+
+        gameManager.useItem(item4);
+        gameManager.useItem(item3);
+
+        gameManager.useItem(item1);
+        gameManager.useItem(item2);
+        gameManager.pickUpItem(item2);
         gameManager.pickUpItem(item1);
 
-        gameManager.removePlayer(player);
+        gameManager.activatePuzzle(room2);
+        gameManager.movePlayer(Direction.SOUTH);
 
-        gameManager.addPlayer(player);
-        gameManager.startPlayer(room1);
+        gameManager.useItem(item4);
+        gameManager.useItem(item3);
 
-        gameManager.disassembleItem(item1);
-        gameManager.removePlayer(player);
-
-        gameManager.removeRoom(room1);
-        gameManager.addRoom(room1);
-
-        gameManager.addPlayer(player);
-        gameManager.startPlayer(room1);
-
-        gameManager.disassembleItem(item2);
+        gameManager.dropItem(item3);
     }
 }

@@ -101,7 +101,8 @@ public class Bag extends Item {
             return false;
         }
         Bag otherBag2 = (Bag) otherBag1;
-        return (this.getValue() == otherBag2.getValue() && this.sumValuesOfBagItems() == otherBag2.sumValuesOfBagItems() &&
+        return (this.getValue() == otherBag2.getValue() &&
+                this.sumValuesOfBagItems() == otherBag2.sumValuesOfBagItems() &&
                 this.getInventory().length == otherBag2.getInventory().length);
     }
 
@@ -109,14 +110,9 @@ public class Bag extends Item {
     public int hashCode() {
         int result = 29; // Different initial prime number
         int multiplier = 47; // Different multiplier
-        result = multiplier * result + name.hashCode();
         result = multiplier * result + value;
-        result = multiplier * result + cap;
-        for (Item item : inventory) {
-            if (item != null) {
-                result = multiplier * result + item.hashCode();
-            }
-        }
+        result = multiplier * result + getInventory().length;
+        result = multiplier * result + sumValuesOfBagItems();
         return result;
     }
 

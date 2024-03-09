@@ -43,7 +43,6 @@ public class Relic extends Item{
     public int hashCode() {
         int result = 19; // Different initial prime number
         int multiplier = 43; // Different multiplier
-        result = multiplier * result + name.hashCode();
         result = multiplier * result + value;
         return result;
     }

@@ -119,7 +119,6 @@ public class LargeBag extends Bag{
     public int hashCode(){
         int result = 31; // Different initial prime number
         int multiplier = 53; // Different multiplier
-        result = multiplier * result + name.hashCode();
         result = multiplier * result + value;
         result = multiplier * result + cap;
         for (Item item : inventory){

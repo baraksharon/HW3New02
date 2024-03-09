@@ -69,9 +69,7 @@ public class Key extends Item{
     @Override
     public int hashCode() {
         int result = 41;
-        result = 31 * result + name.hashCode();
         result = 31 * result + value;
-        result = 31 * result + (keyStatus ? 1 : 0);
         return result;
     }
 

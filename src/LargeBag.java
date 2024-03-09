@@ -82,7 +82,7 @@ public class LargeBag extends Bag{
                         player.destroyBag(player.getPlayerBag());
                     }
                 } else {
-                    player.destroyBag(player.getPlayerBag());
+                    player.destroyBag(player.getPlayerBag(), this);
                 }
                 player.setPlayerBag(this);
                 System.out.println(player.getName()+" is now carrying "+this.getName()+".");

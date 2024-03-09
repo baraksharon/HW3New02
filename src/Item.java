@@ -27,5 +27,20 @@ abstract class Item {
         return  isNearby;
     }
 
+    public Item findEqual(Item item, Player player){
+        Room currentRoom= player.getCurrentRoom();
+        for (int i=0; i<currentRoom.getListItems().length; i++){ // Chcking if the item is in the Room
+            if(currentRoom.getListItems()[i] != null && currentRoom.getListItems()[i].equals(this)){
+                return currentRoom.getListItems()[i];
+            }
+        }
+        for(int j=0; j<player.getInventory().length; j++){  // Checking if the item is in the player's bag
+            if(player.getInventory()[j] != null && player.getInventory()[j].equals(this)) {
+                return player.getInventory()[j];
+            }
+        }
+        return  null;
+    }
+
     public abstract void useItem(Player player);
 }

@@ -7,12 +7,9 @@
     <list default="true" id="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" name="Changes" comment="hw3new01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LargeBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LargeBag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Relic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Relic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Room.java" afterDir="false" />
     </list>
     <list id="50e8c238-8a13-40e3-bafc-2443bce9aaf9" name="Changes by sagid" comment="">
       <change beforePath="$PROJECT_DIR$/src/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bag.java" afterDir="false" />
@@ -31,13 +28,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Player.java">
-      <ranges>
-        <range start1="97" end1="100" start2="97" end2="100" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="157" end1="158" start2="157" end2="157" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="159" end1="165" start2="158" end2="158" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/Bag.java">
       <ranges>
         <range start1="3" end1="5" start2="3" end2="3" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
@@ -49,23 +39,15 @@
         <range start1="46" end1="48" start2="44" end2="46" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
         <range start1="53" end1="53" start2="51" end2="60" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
         <range start1="56" end1="79" start2="63" end2="121" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="103" end1="104" start2="145" end2="147" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="111" end1="112" start2="154" end2="154" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="113" end1="119" start2="155" end2="157" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="121" end1="123" start2="159" end2="159" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="99" end1="100" start2="141" end2="142" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="117" end1="119" start2="159" end2="159" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/Relic.java">
       <ranges>
         <range start1="1" end1="3" start2="1" end2="1" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="45" end1="46" start2="43" end2="43" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Key.java">
-      <ranges>
-        <range start1="1" end1="3" start2="1" end2="1" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="71" end1="72" start2="69" end2="69" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="73" end1="74" start2="70" end2="70" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="25" end1="26" start2="23" end2="24" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="27" end1="28" start2="25" end2="27" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/src/LargeBag.java">
@@ -74,11 +56,12 @@
         <range start1="57" end1="58" start2="53" end2="54" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
         <range start1="62" end1="63" start2="58" end2="59" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
         <range start1="77" end1="79" start2="73" end2="75" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="81" end1="82" start2="77" end2="78" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="84" end1="85" start2="80" end2="81" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
         <range start1="107" end1="109" start2="103" end2="105" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
         <range start1="118" end1="119" start2="114" end2="115" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="121" end1="122" start2="117" end2="117" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="123" end1="129" start2="118" end2="120" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="133" end1="133" start2="124" end2="125" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="122" end1="128" start2="118" end2="120" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="132" end1="132" start2="124" end2="125" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
       </ranges>
     </file>
   </component>
@@ -116,7 +99,7 @@
       <workItem from="1709625812013" duration="5045000" />
       <workItem from="1709831867898" duration="1821000" />
       <workItem from="1709901606432" duration="1189000" />
-      <workItem from="1710018917090" duration="1314000" />
+      <workItem from="1710018917090" duration="5743000" />
     </task>
     <task id="LOCAL‎-00001" summary="hw3new01">
       <created>1709384903220</created>
@@ -139,7 +122,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1709629873733</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL‎-00004" summary="hw3new01">
+      <created>1710020337819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL‎-00004" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1710020337819</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,5 +138,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hw3new01" />
     <option name="LAST_COMMIT_MESSAGE" value="hw3new01" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -23,9 +23,10 @@ public class Relic extends Item{
 
     @Override
     public void useItem(Player player){
-        boolean isRelicNearby= isNearBy(this,player);
+        boolean isRelicNearby= isNearBy(this, player);
         if(isRelicNearby){
-            System.out.println(player.getName()+" is inspecting "+this.getName()+".");
+            Relic equalRelic= (Relic) findEqual(this, player);
+            System.out.println(player.getName()+" is inspecting "+equalRelic.getName()+".");
         } else {
             System.out.println(this.getName()+" is not near "+player.getName()+".");
         }

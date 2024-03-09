@@ -97,7 +97,7 @@ public class Bag extends Item {
 
     @Override
     public boolean equals(Object otherBag1) {
-        if (!(otherBag1 instanceof Bag)) {
+        if ((!(otherBag1 instanceof Bag)) || (otherBag1 instanceof LargeBag)) {
             return false;
         }
         Bag otherBag2 = (Bag) otherBag1;

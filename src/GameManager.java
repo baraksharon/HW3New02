@@ -26,6 +26,7 @@ public class GameManager {
 
     /**
      * adding a room
+     *
      * @param r The room to add.
      */
     public void addRoom(Room r) {
@@ -49,7 +50,7 @@ public class GameManager {
     /**
      * Adds an item to a room in the game.
      *
-     * @param r The room to add the item to.
+     * @param r  The room to add the item to.
      * @param it The item to be added.
      */
     public void addItem(Room r, Item it) {
@@ -60,7 +61,9 @@ public class GameManager {
                 isThere = true;
             }
         }
-        if(!isThere){ System.out.println("Could not add " + it.getName() + " to the game.");}
+        if (!isThere) {
+            System.out.println("Could not add " + it.getName() + " to the game.");
+        }
 
     }
 
@@ -88,13 +91,13 @@ public class GameManager {
     public void removeRoom(Room r) {
         boolean isthere = false; // if the room is exists in the room array
         for (int i = 0; i < rooms.length; i++) {
-            if (rooms[i] != null && rooms[i].equals(r) ) {
+            if (rooms[i] != null && rooms[i].equals(r)) {
                 isthere = true;
                 if (this.player != null) {
                     if (this.player.getCurrentRoom().equals(r)) {//if the player's current room is what we want to remove
                         System.out.println(r.getRoomName() + " could not be removed.");
                     } else {
-                        for (int j=0;j<rooms.length;j++) {
+                        for (int j = 0; j < rooms.length; j++) {
                             rooms[j].removeFromRoomDirection(r);
                         }
                         rooms[i].removeItemFromRoom();
@@ -103,10 +106,9 @@ public class GameManager {
                         rooms[i] = null;
                         System.out.println(r.getRoomName() + " was removed from the game.");
                     }
-                }
-                else if(isthere){// we want to remove room r from the array, and disconnect the others rooms to him
-                    for (int k=0;k<rooms.length;k++) {
-                        if(rooms[k]!=null){
+                } else if (isthere) {// we want to remove room r from the array, and disconnect the others rooms to him
+                    for (int k = 0; k < rooms.length; k++) {
+                        if (rooms[k] != null) {
                             rooms[k].removeFromRoomDirection(r);
                         }
                     }
@@ -143,7 +145,7 @@ public class GameManager {
     public void startPlayer(Room startRoom) {
         if (this.player.getCurrentRoom() == null) {
             this.player.initializationCurrentRoom(startRoom);
-            System.out.println(this.player.getName() + " starts in "  + startRoom.getRoomName()+".");
+            System.out.println(this.player.getName() + " starts in " + startRoom.getRoomName() + ".");
         } else {
             System.out.println(this.player.getName() + " has already started.");
         }
@@ -156,7 +158,7 @@ public class GameManager {
      * @param dMove The direction in which to move the player.
      */
     public void movePlayer(Direction dMove) {
-        Room current=this.player.getCurrentRoom();
+        Room current = this.player.getCurrentRoom();
         int d = -1;
         String directionName = "";
         switch (dMove) {
@@ -206,10 +208,10 @@ public class GameManager {
                     }
                 }
                 if (isTherePlace) { // There is place to add item in the player's Bag
-                    if((this.player.getPlayerBag() instanceof Bag && (it instanceof LargeBag || it instanceof Bag)) || // checking if player's bag is instance of Bag and the item is instance of bag or large bag
-                       (this.player.getPlayerBag() instanceof LargeBag && it instanceof LargeBag)) {// checking if player's bag is instance of LargeBag and if the item instance of large bag
+                    if ((this.player.getPlayerBag() instanceof Bag && (it instanceof LargeBag || it instanceof Bag)) || // checking if player's bag is instance of Bag and the item is instance of bag or large bag
+                            (this.player.getPlayerBag() instanceof LargeBag && it instanceof LargeBag)) {// checking if player's bag is instance of LargeBag and if the item instance of large bag
                         System.out.println(it.getName() + " is not valid for sorting.");
-                    } else{
+                    } else {
                         this.player.addItemToBag(it, count);
                     }
                 } else { // There is no place to add item in the player's Bag
@@ -230,19 +232,19 @@ public class GameManager {
     public void dropItem(Item it) {
         boolean isInBag = false;
         for (int i = 0; i < this.player.getInventory().length; i++) {
-            if (this.player.getInventory()[i] != null  && this.player.getInventory()[i].equals(it)) {
-                index=i;
+            if (this.player.getInventory()[i] != null && this.player.getInventory()[i].equals(it)) {
+                index = i;
                 isInBag = true;
             }
         }
         if (isInBag) {
-            Room current=this.player.getCurrentRoom();
+            Room current = this.player.getCurrentRoom();
             boolean isTherePlaceInRoom = false;
             int counter = 0;
             while (!isTherePlaceInRoom && counter < current.getListItems().length) {
                 if (current.getListItems()[counter] == null) {
                     isTherePlaceInRoom = true;
-                }else{
+                } else {
                     counter += 1;
                 }
             }
@@ -255,7 +257,7 @@ public class GameManager {
 
 
         } else {
-            System.out.println(it.getName() + " is not in "+player.getName()+"'s inventory.");
+            System.out.println(it.getName() + " is not in " + player.getName() + "'s inventory.");
         }
     }
 
@@ -289,7 +291,7 @@ public class GameManager {
      * Solves the puzzle in the current room.
      */
     public void solvePuzzle() {
-        Room current=this.player.getCurrentRoom();
+        Room current = this.player.getCurrentRoom();
         if (current.getPuzzleStatus()) { //if the puzzle exists
             System.out.println(this.player.getName() + " is solving the puzzle in " + current.getRoomName() + ".");
             current.setPuzzleStatus(false);
@@ -305,10 +307,10 @@ public class GameManager {
      * @param currentRoom The room where the puzzle is activated.
      */
     public void activatePuzzle(Room currentRoom) {
-        if (! currentRoom.getKeyRoomStatus()){
+        if (!currentRoom.getKeyRoomStatus()) {
             currentRoom.setPuzzleStatus(true);
         } else {
-            System.out.println(currentRoom.getRoomName()+" was unlocked with "+ currentRoom.getRoomKey().getName()+".");
+            System.out.println(currentRoom.getRoomName() + " was unlocked with " + currentRoom.getRoomKey().getName() + ".");
         }
     }
 
@@ -318,14 +320,14 @@ public class GameManager {
      * @param currentRoom The room where the puzzle is deactivated.
      */
     public void deactivatePuzzle(Room currentRoom) {
-        if (! currentRoom.getKeyRoomStatus()){
+        if (!currentRoom.getKeyRoomStatus()) {
             currentRoom.setPuzzleStatus(false);
         } else {
-            System.out.println(currentRoom.getRoomName()+" was unlocked with "+ currentRoom.getRoomKey().getName()+".");
+            System.out.println(currentRoom.getRoomName() + " was unlocked with " + currentRoom.getRoomKey().getName() + ".");
         }
     }
 
-    public void useItem(Item it){
+    public void useItem(Item it) {
         it.useItem(this.player);
     }
 

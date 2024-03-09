@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" name="Changes" comment="hw3new01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LargeBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LargeBag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Relic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Relic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
     </list>
     <list id="50e8c238-8a13-40e3-bafc-2443bce9aaf9" name="Changes by sagid" comment="">
       <change beforePath="$PROJECT_DIR$/src/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bag.java" afterDir="false" />
@@ -28,40 +25,35 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Bag.java">
+    <file path="$PROJECT_DIR$/src/GameManager.java">
       <ranges>
-        <range start1="3" end1="5" start2="3" end2="3" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="17" end1="18" start2="15" end2="16" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="29" end1="30" start2="27" end2="28" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="31" end1="33" start2="29" end2="31" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="39" end1="41" start2="37" end2="39" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="44" end1="45" start2="42" end2="43" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="46" end1="48" start2="44" end2="46" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="53" end1="53" start2="51" end2="60" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="56" end1="79" start2="63" end2="121" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="99" end1="100" start2="141" end2="142" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="117" end1="119" start2="159" end2="159" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Relic.java">
-      <ranges>
-        <range start1="1" end1="3" start2="1" end2="1" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="25" end1="26" start2="23" end2="24" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="27" end1="28" start2="25" end2="27" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/LargeBag.java">
-      <ranges>
-        <range start1="1" end1="5" start2="1" end2="1" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="57" end1="58" start2="53" end2="54" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="62" end1="63" start2="58" end2="59" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="77" end1="79" start2="73" end2="75" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="81" end1="82" start2="77" end2="78" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="84" end1="85" start2="80" end2="81" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="107" end1="109" start2="103" end2="105" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="118" end1="119" start2="114" end2="115" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="122" end1="128" start2="118" end2="120" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="132" end1="132" start2="124" end2="125" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="28" end1="28" start2="28" end2="29" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="51" end1="52" start2="52" end2="53" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="55" end1="58" start2="56" end2="59" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="62" end1="63" start2="63" end2="66" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="90" end1="91" start2="93" end2="94" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="96" end1="97" start2="99" end2="100" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="105" end1="109" start2="108" end2="111" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="145" end1="146" start2="147" end2="148" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="158" end1="159" start2="160" end2="161" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="208" end1="212" start2="210" end2="216" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="231" end1="231" start2="235" end2="236" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="232" end1="234" start2="237" end2="239" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="238" end1="239" start2="243" end2="244" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="244" end1="245" start2="249" end2="250" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="248" end1="252" start2="253" end2="256" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="257" end1="258" start2="261" end2="262" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="268" end1="268" start2="272" end2="273" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="269" end1="271" start2="274" end2="277" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="275" end1="277" start2="281" end2="284" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="281" end1="282" start2="288" end2="289" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="291" end1="292" start2="298" end2="299" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="307" end1="308" start2="314" end2="315" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="310" end1="311" start2="317" end2="318" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="320" end1="321" start2="327" end2="328" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="323" end1="324" start2="330" end2="331" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="327" end1="328" start2="334" end2="335" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="331" end1="331" start2="338" end2="347" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
       </ranges>
     </file>
   </component>
@@ -99,7 +91,7 @@
       <workItem from="1709625812013" duration="5045000" />
       <workItem from="1709831867898" duration="1821000" />
       <workItem from="1709901606432" duration="1189000" />
-      <workItem from="1710018917090" duration="5743000" />
+      <workItem from="1710018917090" duration="6603000" />
     </task>
     <task id="LOCAL‎-00001" summary="hw3new01">
       <created>1709384903220</created>
@@ -129,7 +121,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1710020337819</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL‎-00005" summary="hw3new01">
+      <created>1710025035807</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL‎-00005" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1710025035807</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

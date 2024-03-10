@@ -85,6 +85,11 @@ public class LargeBag extends Bag{
                     player.destroyBag(player.getPlayerBag(), this);
                 }
                 player.setPlayerBag(this);
+                for (int u=0; u<player.getCurrentRoom().getListItems().length; u++){ // Chcking where the item is in the Room and remove him
+                    if(player.getCurrentRoom().getListItems()[u] != null && player.getCurrentRoom().getListItems()[u].equals(this)){
+                        player.getCurrentRoom().getListItems()[u]= null;
+                    }
+                }
                 System.out.println(player.getName()+" is now carrying "+this.getName()+".");
             } else {
                 System.out.println(this.getName()+" is too small.");

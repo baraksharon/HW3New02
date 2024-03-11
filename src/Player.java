@@ -120,29 +120,55 @@ public class Player {
         System.out.println(this.name + " dropped " + itemToDrop.getName() + " in " + currentRoom.getRoomName() + ".");
     }
 
-    public int sumValuesOfplayerBag(){
-        int sum=0;
-        for (int i=0; i<this.playerBag.getInventory().length; i++){
-            if(this.playerBag.getInventory()[i] != null) {
+    /**
+     * Calculates the sum of values of items in the player's bag.
+     *
+     * @return The sum of values of items in the player's bag.
+     */
+    public int sumValuesOfplayerBag() {
+        int sum = 0;
+        for (int i = 0; i < this.playerBag.getInventory().length; i++) {
+            if (this.playerBag.getInventory()[i] != null) {
                 sum += this.playerBag.getInventory()[i].getValue();
             }
         }
         return sum;
     }
 
-    public Bag getPlayerBag(){
+    /**
+     * Gets the player's bag.
+     *
+     * @return The player's bag.
+     */
+    public Bag getPlayerBag() {
         return playerBag;
     }
-    public void setPlayerBag(Bag newBag){
-        this.playerBag=newBag;
+
+    /**
+     * Sets the player's bag to a new bag.
+     *
+     * @param newBag The new bag to set for the player.
+     */
+    public void setPlayerBag(Bag newBag) {
+        this.playerBag = newBag;
     }
 
-
-    public void destroyBag(Bag bag){
+    /**
+     * Destroys the specified bag.
+     *
+     * @param bag The bag to destroy.
+     */
+    public void destroyBag(Bag bag) {
         System.out.println(this.getName() + " disassembled " + bag.getName() + ".");
-        this.playerBag= null;
+        this.setPlayerBag(null);
     }
 
+    /**
+     * Indicates whether some other object is "equal to" this one.
+     *
+     * @param otherPlayer1 The reference object with which to compare.
+     * @return True if this object is the same as the other argument; false otherwise.
+     */
     @Override
     public boolean equals(Object otherPlayer1) {
         if (!(otherPlayer1 instanceof Player)) {
@@ -151,6 +177,12 @@ public class Player {
         Player otherPlayer2 = (Player) otherPlayer1;
         return (this.sumValuesOfplayerBag() == otherPlayer2.sumValuesOfplayerBag());
     }
+
+    /**
+     * Returns a hash code value for the object.
+     *
+     * @return A hash code value for this object.
+     */
     @Override
     public int hashCode() {
         int result = 23; // Different initial prime number
@@ -158,5 +190,6 @@ public class Player {
         result = multiplier * result + sumValuesOfplayerBag();
         return result;
     }
+
 
 }

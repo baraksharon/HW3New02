@@ -148,7 +148,7 @@ public class Main {
         Room room2 = new Room("Room 2");
 
 
-        Item item1 = new Bag("bag 1", 5, 3);
+        Item item1 = new Bag("Bag 1", 5, 3);
         Item item2 = new Key("Key 2", 6);
         Item item3 = new Relic("Item 3", 7);
         Item item4 = new Relic("Relic 4", 2);
@@ -192,4 +192,5 @@ public class Main {
 
         gameManager.dropItem(item3);
     }
+
 }

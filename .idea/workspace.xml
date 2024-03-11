@@ -4,17 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" name="Changes" comment="hw3new04">
+    <list default="true" id="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" name="Changes" comment="hw3new06">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LargeBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LargeBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Relic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Relic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Room.java" afterDir="false" />
     </list>
     <list id="50e8c238-8a13-40e3-bafc-2443bce9aaf9" name="Changes by sagid" comment="">
       <change beforePath="$PROJECT_DIR$/src/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Key.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LargeBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LargeBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Relic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Relic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,18 +32,85 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Room.java">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="9" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="16" end1="18" start2="18" end2="20" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="41" end1="41" start2="43" end2="48" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="45" end1="45" start2="52" end2="57" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="49" end1="49" start2="61" end2="66" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="53" end1="53" start2="70" end2="75" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="71" end1="72" start2="93" end2="93" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="159" end1="165" start2="180" end2="192" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="170" end1="170" start2="197" end2="204" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="176" end1="179" start2="210" end2="213" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="181" end1="181" start2="215" end2="221" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="191" end1="191" start2="231" end2="232" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Player.java">
+      <ranges>
+        <range start1="97" end1="100" start2="97" end2="100" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="122" end1="126" start2="122" end2="131" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="132" end1="133" start2="137" end2="143" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="135" end1="137" start2="145" end2="153" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="139" end1="141" start2="155" end2="161" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="142" end1="143" start2="162" end2="163" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="145" end1="145" start2="165" end2="171" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="153" end1="153" start2="179" end2="185" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="160" end1="160" start2="192" end2="193" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Main.java">
+      <ranges>
+        <range start1="22" end1="23" start2="22" end2="22" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="150" end1="151" start2="149" end2="150" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="194" end1="194" start2="193" end2="194" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/GameManager.java">
+      <ranges>
+        <range start1="56" end1="59" start2="56" end2="59" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="196" end1="197" start2="196" end2="197" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="233" end1="233" start2="233" end2="234" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="250" end1="254" start2="251" end2="254" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="270" end1="270" start2="270" end2="271" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="271" end1="273" start2="272" end2="275" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="277" end1="279" start2="279" end2="282" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="283" end1="284" start2="286" end2="287" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="329" end1="329" start2="332" end2="337" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="332" end1="333" start2="340" end2="340" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/LargeBag.java">
       <ranges>
-        <range start1="1" end1="5" start2="1" end2="1" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="57" end1="58" start2="53" end2="54" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="62" end1="63" start2="58" end2="59" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="77" end1="79" start2="73" end2="75" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="81" end1="82" start2="77" end2="78" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="87" end1="87" start2="83" end2="88" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
-        <range start1="107" end1="109" start2="108" end2="110" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="118" end1="119" start2="119" end2="120" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="122" end1="128" start2="123" end2="125" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
-        <range start1="132" end1="132" start2="129" end2="130" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="1" end1="7" start2="1" end2="11" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="8" end1="11" start2="12" end2="14" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="14" end1="15" start2="17" end2="22" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="18" end1="18" start2="25" end2="31" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="23" end1="23" start2="36" end2="41" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="27" end1="27" start2="45" end2="53" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="31" end1="31" start2="57" end2="65" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="32" end1="34" start2="66" end2="68" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="35" end1="35" start2="69" end2="76" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="36" end1="37" start2="77" end2="78" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="39" end1="44" start2="80" end2="92" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="52" end1="52" start2="100" end2="108" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="54" end1="65" start2="110" end2="121" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="76" end1="80" start2="132" end2="136" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="84" end1="85" start2="140" end2="141" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="87" end1="90" start2="143" end2="146" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="92" end1="93" start2="148" end2="149" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="94" end1="95" start2="150" end2="151" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="96" end1="99" start2="152" end2="154" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="101" end1="101" start2="156" end2="157" changelist="af48c3f0-fdfc-48c7-8c8a-6e501a0daf7d" />
+        <range start1="102" end1="107" start2="158" end2="168" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="111" end1="111" start2="172" end2="181" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="112" end1="114" start2="182" end2="184" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="122" end1="122" start2="192" end2="197" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="123" end1="124" start2="198" end2="199" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="127" end1="133" start2="202" end2="204" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
+        <range start1="137" end1="137" start2="208" end2="209" changelist="50e8c238-8a13-40e3-bafc-2443bce9aaf9" />
       </ranges>
     </file>
   </component>
@@ -49,18 +123,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,7 +149,7 @@
       <workItem from="1709625812013" duration="5045000" />
       <workItem from="1709831867898" duration="1821000" />
       <workItem from="1709901606432" duration="1189000" />
-      <workItem from="1710018917090" duration="10826000" />
+      <workItem from="1710018917090" duration="16301000" />
     </task>
     <task id="LOCAL‎-00001" summary="hw3new01">
       <created>1709384903220</created>
@@ -118,7 +193,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1710025987728</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL‎-00007" summary="hw3new06">
+      <created>1710060527738</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL‎-00007" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1710060527738</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +209,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hw3new01" />
     <MESSAGE value="hw3new04" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw3new04" />
+    <MESSAGE value="hw3new06" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw3new06" />
   </component>
 </project>

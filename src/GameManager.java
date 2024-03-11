@@ -327,10 +327,14 @@ public class GameManager {
         }
     }
 
+    /**
+     * Uses the specified item, invoking its useItem method with the current player.
+     *
+     * @param it The item to use.
+     */
     public void useItem(Item it) {
         it.useItem(this.player);
     }
-
 }
 
 
